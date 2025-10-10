@@ -59,5 +59,4 @@ Branches:
 
 > To delete a branch in the remote repo:
    git push origin -d <br.name>
-
-
+> Suppose you created a file in test branch but you have not moved the file to staging and you did checkout other branch and changed the file contents and now when you commit the file, the file will be present in the current branch where you commit, but not in the branch where it was created.
