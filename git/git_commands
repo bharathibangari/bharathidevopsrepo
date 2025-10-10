@@ -1,0 +1,63 @@
+
+git init ---> To initialize empty local repository
+
+To provide your details:
+
+git config --global user.name "bharathi"
+git config --global user.email "bharathi@gmail.com"
+
+In git, the code/file is moved in 3 stages:
+1. workspace
+2. staging/indexing
+3. local repo
+
+> By default all the files will be in workspace as untracked files.
+> To check the status:
+  git status
+
+> To move the code to staging:
+  git add <filename> (or) git add .
+ 
+> To move the code to local repo:
+  git commit -m "commit message" <filename> (or) git commit -m "commit message" 
+      
+> To get the logs or commit ID:
+  git log
+
+> To know what changes performed within a commit:
+  git show <commit-ID>
+
+> Sometimes when you try to push to remote repo, you get error saying "the remote has the data which is not present locally". It means that there might some other commits or push happened to the remote repo in the meantime. In such case, you can use:
+  git pull --rebase
+
+Branches:
+> Branch is nothing but copy of data. As the name suggests, it will be a copy of data in the repository.
+
+> By default, the default branch in local repo is "master" and the default branch in the remote or github repo is "main".
+
+> Why we need branches?
+  To isolate the data and secure the data. In general, the main branch will have production critical application code. It is not allowed to work or make changes to the main code since it might cause issue to the critical application code. Hence, we create branches in git. Also, different teams working on different fetaures or tasks. So, we maintain multiple feature branches. Once the feature branches are tested, these will be merged into main branch.
+
+> Different types of branches are:
+  Main branch
+  Release branch
+  Feature branch
+  Hot fix branch
+
+> To get the list of branches: git branch
+> To create a new branch: git branch <br.name>  --> it will copy all the data from the current branch to the newly created branch.
+> To move to a branch: git checkout <br.name>
+> To create and checkout to a branch: git checkout -b <br.name>
+> To merge 2 branches: git merge <br.name>  --> it will merge 2 branches. The content from the other branch will be copied to the current branch.
+> To remove a branch: git branch -d <br.name>
+> when you try to delete a branch before merging, it throws error. To delete the branches forcefully: 
+   git brnach -D <br.name>
+> To push a branch to the remote repo: 
+   git push <git url> <br.name> (or) git push origin <br.name>.
+   
+   Here origin will point to the remote repo.
+
+> To delete a branch in the remote repo:
+   git push origin -d <br.name>
+
+
