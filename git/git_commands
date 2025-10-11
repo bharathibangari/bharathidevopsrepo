@@ -59,4 +59,24 @@ Branches:
 
 > To delete a branch in the remote repo:
    git push origin -d <br.name>
-> Suppose you created a file in test branch but you have not moved the file to staging and you did checkout other branch and changed the file contents and now when you commit the file, the file will be present in the current branch where you commit, but not in the branch where it was created.
+> Suppose you created a file in test branch but you have not moved the file to staging and you did checkout to other branch and changed the file contents and now when you commit the file, the file will be present in the current branch where you commit, but not in the branch where it was created.
+> Generally merge happens automatically without any issues. But, When there are commits happening parallely in 2 different branches and now when you try merge these 2 branches, it will create a merge commit ID. It will open a editor and you need to provide a reason why you want to merge these 2 branches.
+Merge conflict: 
+when you try to merge 2 branches which have a file with same name but the contents are different. git is not sure which data to be committed.
+In such situation, developers should discuss and finalize the code and commit it.
+
+Git cherry-pick:
+> Generally, git tracks the info on the commit IDs. Insted of merging 2 branches, if you want to merge a specific commit ID to your branch, use "git cherry-pick"
+   git cherry-pick <commit_ID>
+> when you clone a remote repository:
+  To get the main branch: git branch
+  To get remote branch: git branch -r
+  To get all branches: git branch -a
+> Sometimes, when the branch name and the file/folder name are same, the "git checkout" command throws error. Then use:
+   git checkout <br.name> --
+Pull request:
+  Merge request and pull request are same. If the merge is done locally, its called merge request. When you merge in remote repo or in github, then its called pull request.
+  In real time, you cannot merge 2 branches easily. You need to create a pull request and provide the description why you want to merge (like is it for a bug fix or enhancement) and then you need to add reviewers. Once it is approved you can merge. After the merge, you can also delete the branch if you do not require anymore.
+git fork:
+  In the open source git repos (like jenkins, k8s etc), you cannot directly make changes since you are not a contributor (do not have collaborator access to the repo) to the repo. Instead you can fork the complete repo (all branches or only main branch) and you can make your changes locally in your github forked repo. Then, you can create a pull request to merge 2 branches.
+
