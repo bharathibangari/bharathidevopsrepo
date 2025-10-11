@@ -88,3 +88,7 @@ Filtering:
       git log --oneline -n 
       git log --author kiran
       git log --since "06-03-2025"  --> date format "MM-DD-YYYY"
+
+> To get all the globally set variables:
+    git config --list
+> To set global variables: git config --global user.name "name"
