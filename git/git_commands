@@ -92,3 +92,89 @@ Filtering:
 > To get all the globally set variables:
     git config --list
 > To set global variables: git config --global user.name "name"
+
+Alias 
+-----
+git status  ---> git s 
+
+
+git config --global alias.s "status"
+git config --global alias.s "status"
+git s
+
+git log
+git config --global alias.l "log"
+git l
+
+
+git log --oneline
+git config --global alias.lo "log --oneline"
+git lO
+ 
+======
+git config --global --unset alias.s
+
+==============================
+
+amend
+-----
+git commit --amend -m "label" -m "label2" -m "label3"
+
+====================================
+========================
+git config --list 
+
+========================
+
+============================
+
+amend
+-----
+git commit --amend -m "label" -m "label2" -m "label3"
+
+====================================
+only for modified files :
+
+git commit -am "messgae"
+
+=======================================
+
+revert
+------
+
+======================================  
+git reset :
+
+git reset HEAD fname ---> staging to WS 
+
+git reset --soft cid (n-1)  ----> LR to Staging
+
+git reset --mixed cid (n-1) ----> LR to Workspace 
+
+
+=============================
+git tag
+
+git tag <t.name> 
+git checkout <t.name> 
+
+git tag -d <tag.name> 
+
+git push origin <tag.name>
+git push origin -d <tag.name> 
+==========================
+
+TAG :
+
+git tag 
+
+git tag <tag.name>
+git checkout <tag.name>
+
+git push origin <t.name>
+
+git tag -d <t.name>
+
+git push origin -d  <t.name>
+
+================================================
