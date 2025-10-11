@@ -87,4 +87,4 @@ Filtering:
       git log --oneline
       git log --oneline -n 
       git log --author kiran
-      git log --since "06-03-2025"
+      git log --since "06-03-2025"  --> date format "MM-DD-YYYY"
