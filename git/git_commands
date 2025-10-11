@@ -80,3 +80,11 @@ Pull request:
 git fork:
   In the open source git repos (like jenkins, k8s etc), you cannot directly make changes since you are not a contributor (do not have collaborator access to the repo) to the repo. Instead you can fork the complete repo (all branches or only main branch) and you can make your changes locally in your github forked repo. Then, you can create a pull request to merge 2 branches.
 
+Filtering:
+  To get the logs/ commit IDs:
+    FILTERING:
+      git log -n --> to get a particular number of commits.
+      git log --oneline
+      git log --oneline -n 
+      git log --author kiran
+      git log --since "06-03-2025"
