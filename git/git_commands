@@ -93,8 +93,9 @@ Filtering:
     git config --list
 > To set global variables: git config --global user.name "name"
 
-Alias 
+Alias : To create shortcuts to git commands.
 -----
+To view all the global variables set (like username, email, env variables, alias etc)
 git status  ---> git s 
 
 
@@ -112,21 +113,18 @@ git config --global alias.lo "log --oneline"
 git lO
  
 ======
+To unset the alias:
+
 git config --global --unset alias.s
 
 ==============================
 
-amend
+amend:
+Note: Only for the latest commit.
+> To edit or add commit message.
+> To append the current changes to the latest commit ID instead of creating a new commit ID.
 -----
 git commit --amend -m "label" -m "label2" -m "label3"
-
-====================================
-========================
-git config --list 
-
-========================
-
-============================
 
 amend
 -----
@@ -139,21 +137,22 @@ git commit -am "messgae"
 
 =======================================
 
-revert
-------
-
+revert: To revert or delete the changes happened in a particular commit. You can as well revert the changes back since it won't delete the commit ID.
+   git revert <Commit-ID>
 ======================================  
-git reset :
+git reset : To move the files back to previous stages.
 
-git reset HEAD fname ---> staging to WS 
+git reset HEAD fname ---> staging to Workspace
 
-git reset --soft cid (n-1)  ----> LR to Staging
+git reset --soft cid (n-1)  ----> Localrepo to Staging
 
-git reset --mixed cid (n-1) ----> LR to Workspace 
+git reset --mixed cid (n-1) ----> Localrepo to Workspace 
 
-
+Note: once you move the files from local repo to workspace, the commit ID will also be deleted. you cannot revert it back.
+"git revert" works on commit IDs and "git reset" works on files.
 =============================
-git tag
+git tag: To add labels to your commits. Like at a particular commit, a new feature is developed. You can tag that commit. The tags can be downloaded.
+That means the code that is part of that commit ID can be re used.
 
 git tag <t.name> 
 git checkout <t.name> 
@@ -162,22 +161,7 @@ git tag -d <tag.name>
 
 git push origin <tag.name>
 git push origin -d <tag.name> 
-==========================
 
-TAG :
-
-git tag 
-
-git tag <tag.name>
-git checkout <tag.name>
-
-git push origin <t.name>
-
-git tag -d <t.name>
-
-git push origin -d  <t.name>
-
-================================================
 git checkout refs/tags/v1.0
 
 =============================================
