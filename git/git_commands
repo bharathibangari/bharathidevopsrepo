@@ -229,7 +229,7 @@ VS
 Distributed Version Control Systems (DVCS) --> git 
 
 ============================
-git branching strategy in your project ?
+git branching strategy in your project ? release, feature branches, main branch etc
 
 REALTIME OPEN SOURCE PROJECT 
 -----
@@ -238,3 +238,35 @@ git fork
 git 
 git clean 
 =======================
+> To rename a branch:  git branch -m <old_name> <new_name>
+> To fetch a remote repo and then checkout to that branch: To verify before merging
+   git fetch origin <branch_name>
+   git checkout <branch_name>
+> What does "git rm" does --> deletes all files in working directory and the staging area
+> How to check which branches are merged into main: git branch --merged
+> How to change the remote URL: git remote set-url origin <new_remote_repo_url>
+> What is fast forward merge: If the merge happens automatically. It won't create any merge commit ID in this case.
+> What are different types of tags:
+  Annotated tag:
+   > Will have a tag, tagger name, email, date and commit hash
+   > Good for releases and official versioning.
+      git tag -a <tag_name> -m "message"
+  Lightweight tag:
+   > Just a pointer to the commit (similar to the branch)
+   > No metadata. Useful for temporary bookmarks.
+> What is detached head state: If the head pointer points to a commit, tag or remote branch instead of local branch. In such cases, you cannot make any commits. You need to add the commits to a new branch with "git checkout -b <branch_name>"
+> How to lock a branch in github: by adding branch protection rules.
+> How to push your code in your local system to remote repo without cloning:
+   git init
+   git add .
+   git commit -m "message"
+   git add remote origin <url>
+   git push -u origin <branch_name>
+> Difference between GitHub and Bitbucket.
+   Both are web based repository hosting servcies.
+   GitHub: developed by Microsoft
+   BitBucket: by Atlassian
+> How to change the remote repostory URL:
+   To get the current remote repo: git remote -v
+   To change the remote repo: git remote set-url origin <new_repo_url>
+   
