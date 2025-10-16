@@ -126,10 +126,6 @@ Note: Only for the latest commit.
 -----
 git commit --amend -m "label" -m "label2" -m "label3"
 
-amend
------
-git commit --amend -m "label" -m "label2" -m "label3"
-
 ====================================
 only for modified files :
 
@@ -177,17 +173,18 @@ git merge: Combines the changes from two branches without altering commit histor
 git pull --rebase 
 
 ======================
-git pull vs git fetch 
-
-========================
+git pull vs git fetch
 
 git pull --> git fetch + git merge origin
+git fetch --> fetches code from remote repo to the origin
 
-
-git pull --rebase
+git pull --rebase --> it won't create any merge commit
+git pull --> creates merge commit ID
 
 
 =========================
+git stash: when you are working on a code and it is in staging and not yet committed. But you want to move to other branch without discarding this code.
+In such times, you can use git stash. It basically stores the code in a temporary memory.
 
 git stash list
 git stash save "label"
@@ -197,26 +194,24 @@ git stash show stash@{x}
 POP, APPLY, DROP
 -----------------
 POP - cut
-----
 git stash pop
-
+----
 
 APPLY  - copy
-------
-git stash apply
 
+git stash apply
+------
 
 DROP  - delete
------
-git stash drop
 
+git stash drop
 --------------------------
 .git/refs/stash
 
 =========
-.gitignore 
+.gitignore : If you want any files not to follow git lifecycle or if you don't want the files to be managed by git, then create a file with name ".gitignore" and add the file names which you want to ignore.
 
-log files 
+> generally it is used ignore the log files 
 
 
 ============================
@@ -234,9 +229,8 @@ git branching strategy in your project ? release, feature branches, main branch 
 REALTIME OPEN SOURCE PROJECT 
 -----
 upstream 
-git fork 
-git 
-git clean 
+git fork -> for the open source project git repos, you cannot directly contribute to code changes since you are not the collaborator. Then you can fork the complete repo to your local repo and work on it and then raise pull requests to merge your code. 
+git clean -> to discard the files in the working and staging area. 
 =======================
 > To rename a branch:  git branch -m <old_name> <new_name>
 > To fetch a remote repo and then checkout to that branch: To verify before merging
