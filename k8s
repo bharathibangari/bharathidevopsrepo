@@ -1,0 +1,5 @@
+prerequisites to deploy EKS setup on AWS cloud using eksctl:
+1. AWS CLI
+2. EKSCTL
+3. Kubectl
+4. visualstudio - optional (to write manifest file)
