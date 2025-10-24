@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: testcont
-        image: sravani2310/mcapp:latest
+        image: devopshubg333/batch16d:pythonimg
         ports:
         - containerPort: 8080
