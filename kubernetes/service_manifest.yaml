@@ -6,7 +6,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: fb_app
+    app: fbapp
   ports:
     - port: 80
       containerPort: 8080
