@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test_deploy
+  name: testdeploy
   labels:
-    name: test_deploy
+    name: testdeploy
     env: dev
 spec:
   replicas: 2
@@ -13,12 +13,12 @@ spec:
       app: fbapp
   template:
     metadata:
-      name: test_pod
+      name: testpod
       labels:
         app: fbapp
     spec:
       containers:
-      - name: test_cont
+      - name: testcont
         image: sravani2310/mcapp:latest
         ports:
         - containerPort: 8080
